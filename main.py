@@ -16,7 +16,6 @@ def main():
         x, y = (x0+(w0+s0)*i, y0)
         img_dish = img.crop((x, y, x+w0, y+h0))
         dish_name = pytesseract.image_to_string(img_dish, lang='fra')
-        if 'pou
         if 'poulet' in dish_name.lower():
             poulet_in_dish = True
         if 'andouillette' in dish_name.lower():
